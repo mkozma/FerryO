@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FerryO.Models;
@@ -36,6 +37,7 @@ namespace FerryO.Controllers
         [HttpPost]
         public IActionResult Create(Result model)
         {
+            model.DateParticipated = DateTime.Now;
             ResultFile.Write(model);
             return RedirectToAction("Index");
         }
