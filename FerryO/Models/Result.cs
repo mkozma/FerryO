@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -7,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace FerryO.Models
 {
-    public class Results
-    {
-        public List<Result> ResultsList { get; set; }
-    }
     [DataContract]
     public class Result : IResult
     {

@@ -11,13 +11,11 @@ namespace FerryO.Controllers
 {
     public class ResultController : Controller
     {
-        public readonly IHostingEnvironment _hostingEnvironment;
         public ResultFile ResultFile { get; set;  }
 
         public ResultController(IHostingEnvironment hostingEnvironment)
         {
-            _hostingEnvironment = hostingEnvironment;
-            ResultFile = new ResultFile(_hostingEnvironment);
+            ResultFile = new ResultFile(hostingEnvironment);
         }
         public IActionResult Index()
         {            
